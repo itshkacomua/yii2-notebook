@@ -1,16 +1,17 @@
 <?php
 
-namespace itshkacomua\notepade;
+namespace itshkacomua\notebook;
 
 /**
- * notepade module definition class
+ * notebook module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'itshkacomua\notepade\controllers';
+    public $controllerNamespace = 'itshkacomua\notebook\controllers';
+    public $defaultRoute = 'notebook';
 
     /**
      * {@inheritdoc}
