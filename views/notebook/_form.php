@@ -18,10 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'user_id')->textInput() ?>
-
     <?= $form->field($model, 'calendar_time')->textInput() ?>
 
     <div class="form-group">

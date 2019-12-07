@@ -4,7 +4,6 @@ namespace itshkacomua\notebook\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use itshkacomua\notebook\models\Notebook;
 
 /**
  * NotebookSearch represents the model behind the search form of `itshkacomua\notebook\models\Notebook`.
