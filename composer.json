@@ -1,0 +1,21 @@
+{
+  "name": "itshkacomua/yii2-notebook",
+  "description": "Notepade module for yii2",
+  "type": "yii2-extension",
+  "keywords": ["yii2","extension","notibook","notepade"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrey Kravchenko",
+      "email": "progandrey@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "itshkacomua\\notebook\\": ""
+    }
+  }
+}
