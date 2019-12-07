@@ -3,7 +3,6 @@
   "description": "Notepade module for yii2",
   "type": "yii2-extension",
   "keywords": ["yii2","extension","notibook","notepade"],
-  "homepage": "https://github.com/itshkacomua/yii2-notebook",
   "license": "MIT",
   "authors": [
     {
