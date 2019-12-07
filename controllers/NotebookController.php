@@ -66,8 +66,15 @@ class NotebookController extends Controller
     {
         $model = new Notebook();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->created_at = time();
+            if (!Yii::$app->user->isGuest) {
+                $model->user_id = Yii::$app->user->getId();
+            }
+
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('create', [
