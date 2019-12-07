@@ -12,7 +12,7 @@ Installation
 
 
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+1. The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 
 
@@ -43,13 +43,14 @@ or add
 to the require section of your `composer.json` file.
 
 
-
-
+2. In the console of the root directory of the site, run the command
+ ```
+ php yii migrate --migrationPath=@itshkacomua/notebook/migrations/
+```
 
 Usage
 
 -----
-
 
 
 Once the extension is installed, simply use it in your code by  :
