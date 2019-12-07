@@ -19,10 +19,5 @@
     "psr-4": {
       "itshkacomua\\notebook\\": "src"
     }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
   }
 }
