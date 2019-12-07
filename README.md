@@ -22,7 +22,7 @@ Either run
 
 ```
 
-php composer.phar require --prefer-dist itshkacomua/yii2-notebook "*"
+php composer.phar require --prefer-dist itshkacomua/yii2-notebook "dev-master"
 
 ```
 
@@ -34,7 +34,7 @@ or add
 
 ```
 
-"itshkacomua/yii2-notebook": "*"
+"itshkacomua/yii2-notebook": "dev-master"
 
 ```
 

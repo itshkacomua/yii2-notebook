@@ -3,11 +3,13 @@
   "description": "Notepade module for yii2",
   "type": "yii2-extension",
   "keywords": ["yii2","extension","notibook","notepade"],
+  "homepage": "https://github.com/itshkacomua/yii2-notebook",
   "license": "MIT",
   "authors": [
     {
       "name": "Andrey Kravchenko",
-      "email": "progandrey@gmail.com"
+      "email": "progandrey@gmail.com",
+      "homepage": "https://itshka.com.ua/"
     }
   ],
   "require": {
@@ -15,7 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "itshkacomua\\notebook\\": ""
+      "itshkacomua\\notebook\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
     }
   }
 }
