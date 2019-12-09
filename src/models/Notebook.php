@@ -13,7 +13,7 @@ use Yii;
  * @property string|null $text
  * @property int $created_at
  * @property int $user_id
- * @property int|null $calendar_time
+ * @property int $calendar_time
  */
 class Notebook extends \yii\db\ActiveRecord
 {
@@ -31,10 +31,11 @@ class Notebook extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['parent_id', 'created_at', 'user_id', 'calendar_time'], 'integer'],
+            [['parent_id', 'created_at', 'user_id'], 'integer'],
             [['title', 'created_at', 'user_id'], 'required'],
             [['text'], 'string'],
             [['title'], 'string', 'max' => 255],
+            [['calendar_time'], 'safe']
         ];
     }
 

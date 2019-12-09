@@ -1,6 +1,12 @@
 Change Log: `yii2-notebook`
 =================================
 
+## version 1.0.1
+
+**Date:** 10-Dec-2019 
+
+- (enh #1): added a calendar widget to the time field.
+
 ## version 1.0.0
 
 **Date:** 07-Dec-2019 

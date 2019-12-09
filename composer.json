@@ -13,7 +13,8 @@
   ],
   "require": {
     "yiisoft/yii2": "~2.0.0",
-    "vova07/yii2-imperavi-widget": "~2.0.11"
+    "vova07/yii2-imperavi-widget": "~2.0.11",
+    "kartik-v/yii2-widget-datetimepicker": "~1.4.9"
   },
   "autoload": {
     "psr-4": {

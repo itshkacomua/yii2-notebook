@@ -72,6 +72,10 @@ class NotebookController extends Controller
                 $model->user_id = Yii::$app->user->getId();
             }
 
+            if (strlen($model->calendar_time) > 1) {
+                $model->calendar_time = strtotime($model->calendar_time);
+            }
+
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -93,10 +97,17 @@ class NotebookController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            if (strlen($model->calendar_time) > 1) {
+                $model->calendar_time = strtotime($model->calendar_time);
+            }
+
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
+        $model->calendar_time = date('d.m.Y h:i', $model->calendar_time);
         return $this->render('update', [
             'model' => $model,
         ]);
