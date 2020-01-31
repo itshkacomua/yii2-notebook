@@ -14,11 +14,23 @@ use kartik\datetime\DateTimePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'parent_id')->textInput() ?>
+    <div class="row">
+
+    <?= $form->field($model, 'parent_id', ['options' => ['class' => 'col-xs-6']])->dropDownList(\itshkacomua\notebook\models\Notebook::getParentList()) ?>
+
+    <?= $form->field($model, 'calendar_time', ['options' => ['class' => 'col-xs-6']])->widget(DateTimePicker::className(),[
+        'name' => 'calendar_time',
+        'type' => DateTimePicker::TYPE_COMPONENT_PREPEND,
+        'value' => '23.02.1982 10:01',
+        'pluginOptions' => [
+            'autoclose'=>true,
+            'format' => 'dd.mm.yyyy hh:ii'
+        ]
+    ]) ?>
+
+    </div>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
-
-    <?//= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'text')->widget(Widget::className(), [
         'settings' => [
@@ -36,38 +48,6 @@ use kartik\datetime\DateTimePicker;
             ],
         ],
     ]);?>
-
-    <?= $form->field($model, 'calendar_time')->widget(DateTimePicker::className(),[
-        'name' => 'calendar_time',
-        /*'options' => ['placeholder' => 'Select operating time ...'],
-        'convertFormat' => true,
-        'pluginOptions' => [
-            'format' => 'd-M-Y g:i A',
-            'startDate' => '01-Mar-2014 12:00 AM',
-            'todayHighlight' => true
-        ]*/
-/*
-            'name' => 'dp_2',*/
-        'type' => DateTimePicker::TYPE_COMPONENT_PREPEND,
-        'value' => '23.02.1982 10:01',
-        'pluginOptions' => [
-            'autoclose'=>true,
-            'format' => 'dd.mm.yyyy hh:ii'
-        ]
-    ]) ?>
-
-    <?
-    /*echo '<label>Start Date/Time</label>';
-    echo DateTimePicker::widget([
-        'name' => 'datetime_10',
-        'options' => ['placeholder' => 'Select operating time ...'],
-        'convertFormat' => true,
-        'pluginOptions' => [
-            'format' => 'd-M-Y g:i A',
-            'startDate' => '01-Mar-2014 12:00 AM',
-            'todayHighlight' => true
-        ]
-    ]);*/?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>

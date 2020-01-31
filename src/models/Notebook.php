@@ -54,4 +54,12 @@ class Notebook extends \yii\db\ActiveRecord
             'calendar_time' => Yii::t('app', 'Calendar Time'),
         ];
     }
+
+    /**
+     * @return array
+     */
+    public static function getParentList()
+    {
+        return array_merge([0 => 'Корневая директория'], \yii\helpers\ArrayHelper::map(self::find()->all(),'id', 'title'));
+    }
 }
